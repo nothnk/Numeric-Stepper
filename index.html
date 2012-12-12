@@ -1,36 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Numeric Stepper by xFlatlinex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Numeric Stepper by nothnk</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>Numeric Stepper</h1>
-        <p>Simple and highly customizable numeric stepper jQuery plugin.</p>
+        <h2>Simple and highly customizable numeric stepper jQuery plugin.</h2>
+        <a href="https://github.com/nothnk/Numeric-Stepper" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="examples.html"><big>View some examples</big></a></p>
-
-        <p class="view"><a href="https://github.com/xFlatlinex/Numeric-Stepper">View the Project on GitHub <small>xFlatlinex/Numeric-Stepper</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/xFlatlinex/Numeric-Stepper/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/xFlatlinex/Numeric-Stepper/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/xFlatlinex/Numeric-Stepper">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Numeric Stepper Plug-in for jQuery</h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>Numeric Stepper Plug-in for jQuery</h1>
 
 <p>Simple and highly customizable jQuery plug-in Turns a text input into a numeric
 stepper.</p>
@@ -46,31 +44,31 @@ allowing you to have completely different steppers with one global call.</p>
 option can have multiple values, the default one will be in bold.</em></p>
 
 <ul>
-<li><em>string</em> <strong>type</strong> <code class="string"><strong>"float"</strong></code>/<code class="string">"int"</code><br>
+<li>string <strong>type</strong> <em><strong>"float"</strong>/"int"</em><br>
 This option indicates whether the input will accept decimal values or just
 integers.</li>
-<li><em>int</em> <strong>floatPrecission</strong> <code class="num">2</code><br>
+<li>int <strong>floatPrecission</strong> <em>2</em><br>
 Indicates the floating point precission for decimals. A value of 2 may result
 in a value like 2.14274 to be shown as 2.14.</li>
-<li><em>bool</em> <strong>ui</strong> <code class="bool">true</code>
+<li>bool <strong>ui</strong> <em>true</em>
 Whether to show the up/down buttons next to the input.</li>
-<li><em>bool</em> <strong>allowWheel</strong> <code class="bool">true</code>
+<li>bool <strong>allowWheel</strong> <em>true</em>
 Allow mouse wheel to increment/decrement number.</li>
-<li><em>bool</em> <strong>allowArrows</strong> <code class="bool">true</code>
+<li>bool <strong>allowArrows</strong> <em>true</em>
 Allow keyboard up/down arrows to increment/decrement number.</li>
-<li><em>number</em> <strong>arrowStep</strong> <code class="num">1</code>
+<li>number <strong>arrowStep</strong> <em>1</em>
 The increment/decrement for keyboard arrows.</li>
-<li><em>number</em> <strong>wheelStep</strong> <code class="num">1</code>
+<li>number <strong>wheelStep</strong> <em>1</em>
 The increment/decrement for mouse wheel.</li>
-<li><em>array</em> <strong>limit</strong> <code>[]</code>
+<li>array <strong>limit</strong> <em>[]</em>
 The min and max numbers allowed by the input expressed as an array.<br>
 E.g: <code>[-5,5]</code> would only allow a range of numbers between -5 and 5.</li>
-<li><em>array</em> <strong>preventWheelAcceleration</strong> <code class="bool">true</code>
+<li>array <strong>preventWheelAcceleration</strong> <em>true</em>
 In some systems, like OS X, the wheel has acceleration, and this may cause
 extremeply high increments, enable this option to prevent this.</li>
-<li><em>string</em> <strong>incrementButton</strong> <code class="string">"&amp;blacktriangle;"</code>
+<li>string <strong>incrementButton</strong> <em>&amp;blacktriangle;</em>
 The content (html) for the increment button</li>
-<li><em>string</em> <strong>decrementButton</strong> <code class="string">"&amp;blacktriangledown;"</code>
+<li>string <strong>decrementButton</strong> <em>&amp;blacktriangledown;</em>
 The content (html) for the decrement button</li>
 </ul><h3>HTML5 settings</h3>
 
@@ -95,13 +93,12 @@ set it to <code>null</code> like this <code>data-limit="[0,null]"</code>.</p>
 <h3>Hooks/Events</h3>
 
 <p>As of now, the plugin does not trigger any events but hooks/callbacks can be
-registered by passing them as options in the settings.</p>
-<div class="info">Real event triggering will be implemented in future versions.</div>
+registered by passing them as options in the settings.<br>
+Real event triggering is planned to be implemented in the somewhat-near future.</p>
 
 <p>All the callbacks, with the exception of <em>onKeyUp</em>, receive the number value and
-a boolean (up) indicating whether it was an increment or not.</p>
-
-<div class="info">The <em>onKeyUp</em> callback will receive the "up" parameter in future versions.</div>
+a boolean (up) indicating whether it was an increment or not.<br>
+The <em>onKeyUp</em> callback will receive the "up" parameter in the future.</p>
 
 <p>These are all hooks supported up to the current version:</p>
 
@@ -136,13 +133,25 @@ wheel.</li>
     <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/xFlatlinex">xFlatlinex</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/nothnk/Numeric-Stepper/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/nothnk/Numeric-Stepper/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/nothnk/Numeric-Stepper"></a> is maintained by <a href="https://github.com/nothnk">nothnk</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+  
   </body>
 </html>
